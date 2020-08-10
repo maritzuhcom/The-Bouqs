@@ -31,7 +31,7 @@ You may or may not choose to add additional packages for fetching API data, page
     - (x) Product description
     - (x) Product manufacturer name and location
     - (x) “Add to Cart” button
-- Clicking on “Add to Cart” takes the user to a cart page
+- (x) Clicking on “Add to Cart” takes the user to a cart page
 - The cart page contains an order summary with a list of all products added to the cart:
     - (x) Small product thumbnail
     - (x) Product name

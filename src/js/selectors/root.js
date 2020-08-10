@@ -55,20 +55,6 @@ export const selectProductFromPathname = (pathname) => {
         let cheapestVariantImage = null;
 
         for (let variant of product.variants) {
-          if (
-            variant.prices.sale &&
-            // should not parse float as we may get NaN
-            cheapestVariantPrice > Number.parseFloat(variant.prices.sale)
-          ) {
-            cheapestVariantName = variant.name;
-            cheapestVariantId = variant.id;
-            // rounding as per requirements
-            cheapestVariantPrice = Math.round(
-              Number.parseFloat(variant.prices.sale)
-            );
-            continue;
-          }
-
           const regularPrice = Number.parseFloat(variant.prices.regular);
 
           if (cheapestVariantPrice > regularPrice) {
