@@ -1,0 +1,11 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: rgb(252, 241, 216) !important;
+}
+
+// ui library has a bug so I made this little specificty hack lol
+.ant-modal-close-x.ant-modal-close-x.ant-modal-close-x {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,78 @@
+{
+  "name": "the-bouqs",
+  "version": "1.0.0",
+  "description": "Thank you for accepting our coding challenge. Please take as much time as required to give us a good indication of your coding strengths. You do not have to follow the project structure or packages given to you. Feel free to organize your project however you'd like, and include/exclude any packages of your choice.",
+  "main": "index.jsx",
+  "scripts": {
+    "watch": "./node_modules/.bin/webpack -d --watch",
+    "dev": "./node_modules/.bin/webpack-dev-server -d --hot --inline --progress --colors",
+    "api": "json-server --watch api/db.js --port 8081 --routes api/routes.json",
+    "dev:api": "npm run api & npm run dev",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack -p",
+    "test": "yarn jest && yarn lint",
+    "test:watch": "yarn jest:watch & yarn lint:watch",
+    "jest": "./node_modules/.bin/jest",
+    "jest:watch": "./node_modules/.bin/jest --watch",
+    "lint": "./node_modules/.bin/eslint src/js test --ext .js --ext .jsx",
+    "lint:watch": "./node_modules/.bin/esw src/js test --ext .js --ext .jsx -w --color --clear",
+    "lint:fix": "./node_modules/.bin/eslint src/js test --ext .js --ext .jsx --fix"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "@babel/plugin-proposal-throw-expressions": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "antd": "^4.5.3",
+    "axios": "^0.19.2",
+    "lodash": "^4.17.19",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "autoprefixer": "^9.8.6",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^4.2.0",
+    "eslint": "^7.5.0",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-watch": "^7.0.0",
+    "faker": "^4.1.0",
+    "file-loader": "^6.0.0",
+    "jest": "^26.2.2",
+    "json-server": "^0.16.1",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maritzuhcom/The-Bouqs.git"
+  },
+  "author": "Maritza Mancillas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maritzuhcom/The-Bouqs/issues"
+  },
+  "homepage": "https://github.com/maritzuhcom/The-Bouqs#readme"
+}
