@@ -8,7 +8,7 @@ export const selectCart = (state) => state.cart;
 // page specific selectors
 export const selectCategoryNamesWithPath = createSelector(
   selectCategories, 
-  categories => categories.map(({ name, path }) => ({ name, path }))
+  categories => categories && categories.map(({ name, path }) => ({ name, path }))
 );
 
 export const selectCartItems = createSelector(selectCart, ({ items }) => Object.values(items));
